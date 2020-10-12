@@ -12,7 +12,7 @@ let middleware=require('./middleware');
 const response=require('express');
 
 const url='mongodb://127.0.0.1:27017';
-const dbname="mini1";
+const dbname="hospitalmanagement";
 let db
 
 MongoClient.connect(url,(err,client)=>{
@@ -96,6 +96,4 @@ app.get('/searchventilators',(req,res)=>{
     res.send("no hospital found :(");
 });
 
-app.listen(9000,(req,res)=>{
-    console.log("working well");
-});
+app.listen(9000);
